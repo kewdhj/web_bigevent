@@ -1,0 +1,62 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url('/assets/images/login_bg.jpg') no-repeat center;
+  /* 是按照图片的比例放大或者缩小至充满容器，而不是按照容器的比例大小来缩放。 */
+  background-size: cover;
+}
+
+.loginAndRegBox {
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.title-box {
+height: 60px;
+background: url('/assets/images/login_title.png') no-repeat center;
+}
+
+/* 先把login的注册页面整个隐藏，单击注册按钮后显示，login.js显示 */
+.reg-box {
+display: none;
+}
+
+.layui-form {
+padding: 0 30px;
+}
+
+
+/* ‘去注册账号’选项靠右放 */
+.links {
+display: flex;
+justify-content: flex-end;
+}
+
+.links a {
+font-size: 12px;
+}
+
+
+
+/* 子绝父相，设置输入框里的i标签位置 */
+/* 先让整个父元素相对定位，再把i标签设置绝对定位，设置好距离后，最后把input输入框直接设置左侧padding即可 */
+.layui-form-item {
+position: relative;
+}
+.layui-icon {
+position: absolute;
+left: 10px;
+top: 10px;
+}
+.layui-input {
+padding-left: 32px;
+}
